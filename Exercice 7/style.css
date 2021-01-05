@@ -1,9 +1,9 @@
-pre{
+#ifrschema{
   color:skyblue;
-}
-strong{
-    font-size:  74px;
 }
 #policeperso{
     font-family:cursive;
+}
+.bigtext{
+    font-size:  74px;
 }
