@@ -13,10 +13,8 @@
 </head>
 
 <body>
-    <button id="afficher" class="btn-primary btn">Afficher</button>
-    <button id="cacher" class="btn-secondary btn">Cacher</button>
-    <button id="activer" class="btn-danger btn">Activer</button>
-    <button id="desactiver" class="btn-danger btn">Désactiver</button>
+    <button id="cacher" class="btn-secondary btn">Afficher/Cacher</button>
+    <button id="activer" class="btn-danger btn">Activer/Desactiver</button>
     <button id="actif" class="btn-warning btn" disabled>Actif</button>
     <div id="txt">
         <p>
@@ -25,18 +23,16 @@
     </div>
     <script>
         $("#cacher").on("click",function(){
-            $("#txt").hide();
+            $("#txt").toggle();
+            // if ($("#txt").css('display') == 'none'){
+            //     $("#txt").show();
+            // }
+            // else{
+            //     $("#txt").hide();
+            // }            
         });
-        $("#afficher").on("click",function(){
-            $("#txt").show();
-        });
-        $("#activer").on("click",function(){
-            // $("#actif").removeAttr('disabled');
-            $("#actif").attr('disabled',false);
-        });
-        $("#desactiver").on("click",function(){
-            $("#actif").attr('disabled',true);
-        });
+        
+       
     </script>
 </body>
 
