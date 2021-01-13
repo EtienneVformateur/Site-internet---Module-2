@@ -18,10 +18,26 @@
     <?php
     $mdpatrouver = "123";
     $nomatrouver = "test";
+
     if (isset($_POST['nomtapper']) & isset($_POST['mdptapper'])){
         $nomtapper = $_POST['nomtapper'];
         $mdptapper = $_POST['mdptapper'];
-        if($mdptapper == $mdpatrouver & $nomtapper == $nomatrouver){
+    
+        //Connexion à la base de donnée
+        $servername = "localhost";
+        $username = "root";
+        $password = "";
+        $dbname = "ifr_sitemobile";
+
+        // Create connection
+        $conn = new mysqli($servername, $username, $password, $dbname);
+
+        $sql = "SELECT `username`, `password` FROM `ifr_sitemobile`.`utilisateur` WHERE  `username`='$nomtapper' AND `password`='$mdptapper';";
+        $result = $conn->query($sql);
+
+
+        
+        if($result->num_rows > 0){
             echo 'Authentification ok';
         }
         else{
