@@ -15,7 +15,6 @@
                     <th>Nom</th>
                     <th>Note 1</th>
                     <th>Note 2</th>
-                    <th>Calcul</th>
                     <th>Total</th>
                 </tr>
             </thead>
@@ -24,14 +23,12 @@
                     <td>Roméo</td>
                     <td><input type="number" id="r1"></td> 
                     <td><input type="number" id="r2"></td>
-                    <td><button onclick="sommeRomeo()">Somme</button></td>
                     <td id="t1"></td>
                 </tr>
                 <tr>
                     <td>Juliette</td>
                     <td><input type="number" id="j1"></td>
                     <td><input type="number"id="j2"></td>
-                    <td><button onclick="sommeJuliette()">Somme</button></td>
                     <td id="t2"></td>
                 </tr>
             </tbody>
@@ -74,4 +71,13 @@
         var t2 = document.getElementById('t2');
         t2.innerHTML = j1+j2;
     }
+    var r1 = document.getElementById('r1');
+    var r2 = document.getElementById('r2');
+    r1.addEventListener("input",sommeRomeo);
+    r2.addEventListener("input",sommeRomeo);
+
+    var j1 = document.getElementById('j1');
+    var j2 = document.getElementById('j2');
+    j1.addEventListener("input",sommeJuliette);
+    j2.addEventListener("input",sommeJuliette);
 </script>
