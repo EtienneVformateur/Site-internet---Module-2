@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Releve de notes</title>
+        <meta name="description" content="Examen">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nom</th>
+                    <th>Note 1</th>
+                    <th>Note 2</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="gris">
+                    <td>Roméo</td>
+                    <td><input type="number" id="r1"></td> 
+                    <td><input type="number" id="r2"></td>
+                    <td id="t1"></td>
+                </tr>
+                <tr>
+                    <td>Juliette</td>
+                    <td><input type="number" id="j1"></td>
+                    <td><input type="number"id="j2"></td>
+                    <td id="t2"></td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <br>
+        <table>
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Coefficient</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="gris">
+                    <td>Note 1</td>
+                    <td><input id="c1" type="number"></td>
+                </tr>
+                <tr>
+                    <td>Note 2</td>
+                    <td><input id="c2" type="number"></td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>
+<script>
+    
+    
+
+    function moyenneRomeo(){
+        var r1 = document.getElementById('r1').valueAsNumber;
+        var r2 = document.getElementById('r2').valueAsNumber;
+        var t1 = document.getElementById('t1');
+        var c1 = document.getElementById('c1').valueAsNumber;
+        var c2 = document.getElementById('c2').valueAsNumber;
+        t1.innerHTML = ((r1*c1) + (r2*c2))/(c1+c2) ;
+    }
+    function moyenneJuliette(){
+        var j1 = document.getElementById('j1').valueAsNumber;
+        var j2 = document.getElementById('j2').valueAsNumber;
+        var t2 = document.getElementById('t2');
+        var c1 = document.getElementById('c1').valueAsNumber;
+        var c2 = document.getElementById('c2').valueAsNumber;
+        t2.innerHTML = ((j1*c1) + (j2*c2))/(c1+c2) ;
+
+    }
+    var r1 = document.getElementById('r1');
+    var r2 = document.getElementById('r2');
+    r1.addEventListener("input",moyenneRomeo);
+    r2.addEventListener("input",moyenneRomeo);
+
+    var j1 = document.getElementById('j1');
+    var j2 = document.getElementById('j2');
+    j1.addEventListener("input",moyenneJuliette);
+    j2.addEventListener("input",moyenneJuliette);
+
+    var c1 = document.getElementById('c1');
+    var c2 = document.getElementById('c2');
+    c1.addEventListener("input",moyenneRomeo);
+    c2.addEventListener("input",moyenneRomeo);
+    c1.addEventListener("input",moyenneJuliette);
+    c2.addEventListener("input",moyenneJuliette);
+</script>
