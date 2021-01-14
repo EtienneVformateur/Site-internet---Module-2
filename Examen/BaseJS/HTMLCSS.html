@@ -22,17 +22,17 @@
             <tbody>
                 <tr class="gris">
                     <td>Roméo</td>
-                    <td><input type="number" id="romeo1"></td> 
-                    <td><input type="number" id="romeo2"></td>
-                    <td><button>Somme</button></td>
-                    <td></td>
+                    <td><input type="number" id="r1"></td> 
+                    <td><input type="number" id="r2"></td>
+                    <td><button onclick="sommeRomeo()">Somme</button></td>
+                    <td id="t1"></td>
                 </tr>
                 <tr>
                     <td>Juliette</td>
-                    <td><input type="number" id="juliette1"></td>
-                    <td><input type="number"id="juliette2"></td>
-                    <td><button>Somme</button></td>
-                    <td></td>
+                    <td><input type="number" id="j1"></td>
+                    <td><input type="number"id="j2"></td>
+                    <td><button onclick="sommeJuliette()">Somme</button></td>
+                    <td id="t2"></td>
                 </tr>
             </tbody>
         </table>
@@ -59,6 +59,19 @@
     </body>
 </html>
 <script>
-    var element_romeo_note1 = document.getElementById('romeo1');
-    var valeur_romeo_note1 = element_romeo_note1.valueAsNumber;
+    
+    
+
+    function sommeRomeo(){
+        var r1 = document.getElementById('r1').valueAsNumber;
+        var r2 = document.getElementById('r2').valueAsNumber;
+        var t1 = document.getElementById('t1');
+        t1.innerHTML = r1+r2;
+    }
+    function sommeJuliette(){
+        var j1 = document.getElementById('j1').valueAsNumber;
+        var j2 = document.getElementById('j2').valueAsNumber;
+        var t2 = document.getElementById('t2');
+        t2.innerHTML = j1+j2;
+    }
 </script>
