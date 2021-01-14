@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Releve de notes</title>
+        <meta name="description" content="Examen">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nom</th>
+                    <th>Note 1</th>
+                    <th>Note 2</th>
+                    <th>Calcul</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="gris">
+                    <td>Roméo</td>
+                    <td><input type="number" id="romeo1"></td> 
+                    <td><input type="number" id="romeo2"></td>
+                    <td><button>Somme</button></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Juliette</td>
+                    <td><input type="number" id="juliette1"></td>
+                    <td><input type="number"id="juliette2"></td>
+                    <td><button>Somme</button></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <br>
+        <table>
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Coefficient</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="gris">
+                    <td>Note 1</td>
+                    <td><input type="number"></td>
+                </tr>
+                <tr>
+                    <td>Note 2</td>
+                    <td><input type="number"></td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>
+<script>
+    var element_romeo_note1 = document.getElementById('romeo1');
+    var valeur_romeo_note1 = element_romeo_note1.valueAsNumber;
+</script>
